@@ -1,0 +1,4 @@
+Couldn't match type `Accessor Int Int' with `Mutator Int' Expected type: ASetter BlitState BlitState
+Int Int Actual type: Getting Int BlitState Int In the first argument of `(-~)', namely `remaining'
+In the second argument of `(&)', namely `remaining -~ i0_dim' In the second argument of `($)',
+namely `state & offset +~ i0_dim & remaining -~ i0_dim'
