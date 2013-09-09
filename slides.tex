@@ -25,8 +25,68 @@ Haskell - My Favorite Blub(1)
   * GHC
     * the primary haskell system
   * install process
+    * link to vagrant box
+    * which I send out earlier
   * ghci
-  * 
+    * interactive prompt.
+  * TOTALLY PRACTICAL STUFF
+  * ghci commands - different from haskell code!
+    * :help
+  * :type ghci command
+let x = 1
+:type x
+x :: Integer
+
+  * Haskell syntax!
+  * value language expression
+    * "let" introduces a binding
+    * "x" a binding identifier
+    * "=" defines value the identifier is equal to
+    * "1" the numeric value 1.
+  * ":type x" <- not haskell syntax!
+  * type language expression
+    * "::" binary "is of type" operator
+    * the lhs are identifiers
+    * the rhs specifies the type.
+      * the type language is not the value language
+    * "Integer" the type identifier for arbitrary precision integer values.
+  * We did not pair the definition with a type declaration. Haskell then inferred a most general
+  (monomorphic) type for us.
+  * If the most general type is not the type we want then the definition can be paired with a type declaration.
+let x :: Int = 1
+  * This is one method of pairing a definition with a declaration.
+  * The type identifier "Int" is a fixed with integer type with good performance characteristics.
+  * There are others...
+    * Float
+    * Double
+    * Rational
+    * 
+  * wait... rationals?
+    * yep!
+    * works like you'd expect:
+λ: x * 2 / 5 + 100
+502 % 5
+λ:
+* polymorphism!
+* :info
+λ: :info Int
+data Int = GHC.Types.I# GHC.Prim.Int#   -- Defined in `GHC.Types'
+instance Bounded Int -- Defined in `GHC.Enum'
+instance Enum Int -- Defined in `GHC.Enum'
+instance Eq Int -- Defined in `GHC.Classes'
+instance Integral Int -- Defined in `GHC.Real'
+instance Num Int -- Defined in `GHC.Num'
+instance Ord Int -- Defined in `GHC.Classes'
+instance Read Int -- Defined in `GHC.Read'
+instance Real Int -- Defined in `GHC.Real'
+instance Show Int -- Defined in `GHC.Show'
+λ:
+  *
+    * The type expression after the "=>" 
+    * The type expression before the "=>" is the context.
+    * In this case the context is a single constraint:
+      "The type identified 
+* :browse
 
 1) http://en.wikipedia.org/wiki/Paul_Graham_(computer_programmer)#Blub
 
