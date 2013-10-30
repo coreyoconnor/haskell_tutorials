@@ -9,5 +9,5 @@ import Test.SmallCheck.Series
 
 main = defaultMain
     [ testProperty "simple strings match" $
-        \(prefix :: String, x :: String, suffix :: String) -> True == match (regex x)
+        \(prefix :: String, s :: String, suffix :: String) -> True == (prefix ++ s ++ suffix) `match` (regex s)
     ]
