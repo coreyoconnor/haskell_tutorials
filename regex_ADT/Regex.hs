@@ -1,8 +1,12 @@
 module Regex where
 
-match :: String -> regex -> Bool
-match str r = undefined
+import Data.List (isInfixOf)
 
-regex :: String -> regex
-regex str = undefined
+data Regex = Regex String
+
+match :: String -> Regex -> Bool
+match in_str (Regex match_str) = match_str `isInfixOf` in_str
+
+regex :: String -> Regex
+regex str = Regex str
 
